@@ -1,0 +1,41 @@
+let turma = '6ano';
+let semana = 'Semana 01';
+let disciplina = 'Geografia';
+let comNota = true;
+
+if (comNota) {
+  console.log('Notas entregues!');
+} else {
+  console.log('Devolver as notas antes de continuar!');
+}
+
+if (turma !== '5ano'){
+  console.log('Identifique a turma correta!');
+} else if (semana !== 'Semana 01') {
+  console.log ('Identifiqueu a semana correta!');
+} else if (disciplina !== 'Geografia') {
+  console.log('Identifique a disciplina correta!')
+} else {
+  console.log('Consultar as notas dos alunos!')
+}
+if (comNota && turma && semana && disciplina) {
+  console.log('As notas devem ser geradas!')
+} else {
+  console.log('Verificar os itens que estão em falta!')
+}
+comNota ? console.log('Notas entregues! - Com operador ternário') : console.log('Devolver as notas antes de continuar! - Com operador ternário');
+
+switch (turma){
+  case '6ano':
+  console.log('6ano escolhido!');
+  break;
+  case '7ano':
+  console.log('7ano escolhido!');
+  break;
+  case '8ano':
+  console.log('8ano escolhido!');
+  break;
+  default:
+  console.log('Escolha uma das turmas!');
+  break;
+}
