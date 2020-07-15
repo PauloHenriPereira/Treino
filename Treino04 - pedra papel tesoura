@@ -1,0 +1,62 @@
+const getUserChoice = (userInput) => {
+  userInput = userInput.toLowerCase();
+  if (userInput === 'rock') {
+    return userInput;
+  } else if (userInput === 'paper'){
+    return userInput;
+  } else if (userInput === 'scissors') {
+    return userInput;
+  } else if (userInput === 'bomb') {
+    return userInput;
+  } else {
+    //return console.log('Escolha pedra, papel ou tesoura!');
+    return userInput = 'errado';
+  }
+  }
+ //console.log('Você escolheu '+getUserChoice('rock')+'!');
+  function getComputerChoice() {
+    computerChoice = Math.floor(Math.random() * 3);
+    if (computerChoice === 0) {
+      return computerChoice = 'rock';
+    } else if (computerChoice === 1) {
+      return computerChoice = 'paper';
+    } else {
+      return computerChoice = 'scissors';
+    }
+  }
+  //console.log('O computador escolheu '+getComputerChoice()+'!');
+  function determineWinner (userChoice, computerChoice) {
+  if (userChoice === 'errado') {
+return console.log('Opção inválida - Escolha pedra, papel ou tesoura!');
+  } else if (userChoice === computerChoice) {
+      return console.log('Jogo empatado!');
+    } else if (userChoice === 'rock') {
+      if (computerChoice === 'paper') {
+        return console.log('Pedra vs Papel - Vitória do computador!');
+      } else {
+        return console.log('Pedra vs Tesoura - Você venceu!');
+      }
+      } else if (userChoice === 'paper') {
+        if (computerChoice === 'scissors') {
+          return console.log('Papel vs Tesoura - Vitória do computador!');
+        } else {
+          return console.log('Papel vs Pedra - Você venceu!');
+        }
+      } else if (userChoice === 'scissors') {
+          if (computerChoice === 'rock') {
+          return console.log('Tesoura vs Pedra - Vitória do computador!');
+        } else {
+          return console.log('Tesoura vs Papel - Você venceu!');
+        }
+      } else {
+        return console.log('Você não sabe jogar!')
+      }
+    }
+ //   console.log(determineWinner(getUserChoice('rock'), getComputerChoice()));
+  function playGame() {
+    userChoice = getUserChoice('pão');
+    computerChoice = getComputerChoice();
+    console.log('Você escolheu ' +userChoice+ ' e o computador escolheu ' +computerChoice+'.');
+    console.log(determineWinner(userChoice, computerChoice));
+  }
+  playGame();
