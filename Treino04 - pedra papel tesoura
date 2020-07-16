@@ -57,6 +57,6 @@ return console.log('Opção inválida - Escolha pedra, papel ou tesoura!');
     userChoice = getUserChoice('pão');
     computerChoice = getComputerChoice();
     console.log('Você escolheu ' +userChoice+ ' e o computador escolheu ' +computerChoice+'.');
-    console.log(determineWinner(userChoice, computerChoice));
+    determineWinner(userChoice, computerChoice);
   }
   playGame();
